@@ -4,9 +4,9 @@
   "description": "API REST para la prueba de almundo",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon index.js --exec babel-node",
-    "start": "node server.js",
-    "build": "babel server --out-dir /server",
+    "start:dev": "NODE_ENV=development DEBUG=almundo* nodemon index.js --exec babel-node",
+    "start": "NODE_ENV=production node server.js",
+    "build": "babel index.js --out-dir server",
     "postinstall": "npm run build"
   },
   "keywords": [],
@@ -24,6 +24,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
+    "debug": "^3.1.0",
     "express": "^4.16.2",
     "express-jwt": "^5.3.0"
   }
