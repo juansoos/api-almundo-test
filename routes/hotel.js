@@ -52,7 +52,7 @@ app.get('/hotel/:id', async (req, res) => {
   const { id } = req.params;
   try {
     await database.connect();
-    const hotels = await database.getHotels(id);
+    const hotels = await database.getHotel(id);
     await database.disconnect();
     res.status(200).json(hotels);
   } catch (error) {

@@ -1,0 +1,13 @@
+{
+  "name": "api-rest",
+  "alias": "api-rest-almundo.now.sh",
+  "env": {
+    "NODE_ENV": "production",
+    "DB_USER": "admin",
+    "DB_PWD": "Od5Z524CmNoq",
+    "DB_HOST": "ds243285.mlab.com",
+    "DB_PORT": "43285",
+    "DB_NAME": "almundo"
+  },
+  "type": "npm"
+}
