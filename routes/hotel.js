@@ -94,7 +94,9 @@ app.delete('/hotel/:id', async (req, res) => {
     await database.connect();
     const hotelDeleted = await database.deleteHotel(id);
     await database.disconnect();
-    res.status(201).json(hotelDeleted);
+    if (hotelDeleted) {
+      res.status(201).json({ message: 'valid deleting' });
+    }
   } catch (error) {
     handleError(error, res);
   }

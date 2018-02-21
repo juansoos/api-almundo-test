@@ -7,7 +7,7 @@
     "start:dev": "NODE_ENV=development DEBUG=almundo* nodemon index.js --exec babel-node",
     "start": "NODE_ENV=production node server.js",
     "build": "babel ./ --out-dir server --ignore node_modules",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build && gulp"
   },
   "keywords": [],
   "author": "Julián Sotelo <juliansotelo0825@gmail.com> (https://github.com/juansoos)",
@@ -16,6 +16,7 @@
     "eslint": "^4.18.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
+    "gulp": "^3.9.1",
     "nodemon": "^1.15.0"
   },
   "dependencies": {

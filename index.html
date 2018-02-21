@@ -1,0 +1,973 @@
+<html><head>
+      <style id="style">
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body {
+  font-size: 16px;
+  padding: 15px;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+body .katex {
+  font: 400 1.2em 'KaTeX_Main';
+  line-height: 1.2em;
+  white-space: nowrap;
+  text-indent: 0;
+}
+body .katex .mfrac>.vlist>span:nth-child(2) {
+  top: 0 !important;
+}
+body .katex-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 5px;
+}
+body .flowchart-error,
+body .sequence-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-pack: left;
+  -moz-box-pack: left;
+  -o-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+}
+li label.taskListItem {
+  margin-left: -2em;
+}
+li label.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+div.math-rendered {
+  text-align: center;
+}
+.math-failed {
+  background-color: rgba(255,0,0,0.1);
+  color: #d90000;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+sup {
+  position: relative;
+  top: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+sub {
+  position: relative;
+  bottom: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+a {
+  color: #2bac8f;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: -5px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
+}
+a img {
+  vertical-align: sub;
+}
+a:hover {
+  color: #2eb899;
+  text-decoration: underline;
+  background-color: rgba(255,201,92,0.3);
+}
+a:visited {
+  color: #2bac8f;
+}
+hr {
+  border-top: none;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 15px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+h1 {
+  font-size: 2.55em;
+  padding-bottom: 0.3em;
+  line-height: 1.2em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.44em;
+}
+h1:first-child {
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.75em;
+  padding-bottom: 0.3em;
+  line-height: 1.225em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.57em;
+}
+h2:first-child {
+  margin-top: 0;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43em;
+  margin: 1em 0 0.66em;
+}
+h4 {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  margin: 1em 0 0.8em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+}
+h6 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+  color: #777;
+}
+p {
+  line-height: 1.6em;
+  margin: 0 0 1em;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+img {
+  max-width: 100%;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i {
+  font-style: italic;
+}
+s,
+del,
+strike {
+  text-decoration: line-through;
+}
+u {
+  text-decoration: underline;
+}
+blockquote {
+  border-left: solid 4px #3fb399;
+  margin: 0 0 1em;
+  padding: 0 25px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ul li {
+  display: list-item;
+}
+ul li p {
+  margin: 0;
+}
+ul>li>ul,
+ul>li>ol {
+  margin: 0;
+}
+ul>li>ul {
+  list-style-type: circle;
+}
+ul>li>ul>li>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ol li {
+  display: list-item;
+}
+ol li p {
+  margin: 0;
+}
+ol>li>ul,
+ol>li>ol {
+  margin: 0;
+}
+code {
+  color: #cc305f;
+  padding: 0.2em 0.4em;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  font-size: 1em;
+  text-decoration: none;
+  margin-right: 2px;
+}
+pre {
+  padding: 0.5em !important;
+  border: solid 1px #d1d1d1;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 0 0 1em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  line-height: 1.4em;
+}
+pre.flowchart,
+pre.sequence {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #fff;
+}
+pre.CodeMirror {
+  height: initial;
+}
+pre.CodeMirror>code {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-x: auto;
+}
+pre code {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+pre>span.lineNumber {
+  display: none;
+  font-size: 1em;
+  padding: 0.5em 0;
+  margin: -0.5em 0.5em -0.5em -0.5em;
+  border-right: 1px solid;
+  text-align: right;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+pre>span.lineNumber.CodeMirror-gutters {
+  position: initial;
+  top: initial;
+  left: initial;
+  min-height: 0 !important;
+}
+pre>span.lineNumber>span {
+  display: block;
+  padding: 0 0.5em 0;
+}
+table {
+  display: block;
+  width: 100%;
+  margin: 0 0 1em;
+}
+table thead tr {
+  background-color: #fff;
+}
+table thead th {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 1px 0 2px 1px;
+  border-color: #d0d0d0;
+  font-weight: bold;
+}
+table thead th:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+table tbody tr:nth-child(2n + 1) {
+  background-color: #f9f9f9;
+}
+table tbody tr:nth-child(2n) {
+  background-color: #fff;
+}
+table tbody td {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 0 0 1px 1px;
+  border-color: #d0d0d0;
+}
+table tbody td:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+kbd {
+  background-color: #fafbfc;
+  border: solid 1px #d0d0d0;
+  border-bottom-color: #888;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 3px 5px;
+}
+body[data-theme="dark"] {
+  color: #f9f9f9;
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="dark"] a:hover {
+  background-color: rgba(90,214,186,0.2) !important;
+}
+body[data-theme="dark"] code {
+  color: #ea6730;
+  border-color: #3d4450;
+  background-color: #363a3e;
+}
+body[data-theme="dark"] pre {
+  border-color: #474f5c;
+}
+body[data-theme="dark"] pre code {
+  background-color: transparent;
+}
+body[data-theme="dark"] label.taskListItem {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table thead tr {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n) {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] kbd {
+  background-color: #444b59;
+  color: #f9f9f9;
+}
+body[data-theme="solarized-dark"] {
+  color: #93a1a1;
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table thead tr {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n) {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+/*# sourceMappingURL=browser/components/markdown.css.map */
+body {
+  font-family: 'Lato','helvetica','arial','sans-serif';
+  font-size: 14px;
+  false
+}
+code {
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+  background-color: rgba(0,0,0,0.04);
+}
+.lineNumber {
+  display: block !important;
+  font-family: 'Monaco','Consolas','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+}
+
+.clipboardButton {
+  color: rgba(147,147,149,0.8);;
+  fill: rgba(147,147,149,1);;
+  border-radius: 50%;
+  margin: 0px 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.clipboardButton:hover {
+  transition: 0.2s;
+  color: #939395;
+  fill: #939395;
+  background-color: rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  border: none;
+}
+
+h1 {
+  padding-bottom: 4px;
+  margin: 1em 0 8px;
+}
+
+h2 {
+  padding-bottom: 0.2em;
+  margin: 1em 0 0.37em;
+}
+
+body p {
+  white-space: normal;
+}
+</style>
+      <link rel="stylesheet" href="file:///Applications/Boostnote.app/Contents/Resources/app/node_modules/katex/dist/katex.min.css">
+      <link rel="stylesheet" href="file:///Applications/Boostnote.app/Contents/Resources/app/node_modules/codemirror/lib/codemirror.css">
+      <link rel="stylesheet" id="codeTheme" href="file:///Applications/Boostnote.app/Contents/Resources/app/node_modules/codemirror/theme/dracula.css">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>API REST Almundo test</title>
+    </head><body data-theme="white"><h1 data-line="0" id="API-REST-Almundo-test">API REST Almundo test</h1>
+<p data-line="2">Documentación de la API REST utilizada en la prueba para el semillero de Almundo. Dicha API se ha desarrollado utilizando express como framework web y MongoDB como gestor de base de datos.</p>
+<h2 data-line="4" id="Getting-Started"><strong>Getting Started</strong></h2>
+<p data-line="5">Estas instrucciones le ayudarán a obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y pruebas.</p>
+<h3 data-line="7" id="Installing"><strong>Installing</strong></h3>
+<p data-line="8">Primero se require clonar el repositorio</p>
+<ul>
+<li>
+<p data-line="10"><strong>SSH</strong> <code>git clone git@bitbucket.org:las3jotas/database.git</code></p>
+</li>
+<li>
+<p data-line="12"><strong>HTTPS</strong> <code>git clone https://juansoos@bitbucket.org/las3jotas/database.git</code></p>
+</li>
+</ul>
+<p data-line="14">Luego de ello ejecutar <code>npm install</code> dentro de la carpeta del proyecto.</p>
+<h3 data-line="16" id="Running-in-development"><strong>Running in development</strong></h3>
+<p data-line="18">Para correr la API en desarrollo se ejecuta <code>npm run start:dev</code></p>
+<hr>
+<h2 data-line="22" id="EndPoints">EndPoints</h2>
+<p data-line="24">La API REST se encuentra alojada en <a href="https://zeit.co/now">now</a> con la URL <a href="https://api-rest-almundo.now.sh/api/v1">https://api-rest-almundo.now.sh/api/v1</a></p>
+<h2 data-line="27" id="Obtener-hoteles"><strong>Obtener hoteles</strong></h2>
+<p data-line="29">Devuelve un array de datos json</p>
+<ul>
+<li>
+<p data-line="31"><strong>URL</strong></p>
+<p data-line="33">/hotels</p>
+</li>
+<li>
+<p data-line="35"><strong>Method:</strong></p>
+<p data-line="37"><code>GET</code></p>
+</li>
+<li>
+<p data-line="39"><strong>URL Params</strong></p>
+<p data-line="41">None</p>
+</li>
+<li>
+<p data-line="43"><strong>Data Params</strong></p>
+<p data-line="45">None</p>
+</li>
+<li>
+<p data-line="47"><strong>Success Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 200<br>
+<strong>Content:</strong><pre class="code cm-s-dracula CodeMirror"><span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span></span><code class="">[
+  {
+    _id:  "59fb93cef36d28650ac2ec90"
+    id: "249942"
+    name: "Hotel Stefanos"
+    stars:  3
+    price:  994.18
+    image:  "4900059_30_b.jpg"
+    amenities:[
+      "safety-box"
+      "nightclub"
+      "deep-soaking-bathtub"
+      "beach"
+      "business-center"
+    ]
+  }
+]
+</code><i><button class="clipboardButton"><svg width="13" height="13" viewBox="0 0 1792 1792"><path d="M768 1664h896v-640h-416q-40 0-68-28t-28-68v-416h-384v1152zm256-1440v-64q0-13-9.5-22.5t-22.5-9.5h-704q-13 0-22.5 9.5t-9.5 22.5v64q0 13 9.5 22.5t22.5 9.5h704q13 0 22.5-9.5t9.5-22.5zm256 672h299l-299-299v299zm512 128v672q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-160h-544q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h1088q40 0 68 28t28 68v328q21 13 36 28l408 408q28 28 48 76t20 88z"></path></svg></button></i></pre>
+</li>
+</ul>
+</li>
+<li>
+<p data-line="71"><strong>Error Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 404 NOT FOUND<br>
+<strong>Content:</strong> <code>{ error : "Hotels not found" }</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 data-line="78" id="Obtener-hoteles-por-un-nombre"><strong>Obtener hoteles por un nombre</strong></h2>
+<p data-line="80">Devuelve un array de datos json</p>
+<ul>
+<li>
+<p data-line="82"><strong>URL</strong></p>
+<p data-line="84">/hotels/name/:name</p>
+</li>
+<li>
+<p data-line="86"><strong>Method:</strong></p>
+<p data-line="88"><code>GET</code></p>
+</li>
+<li>
+<p data-line="90"><strong>URL Params</strong><br>
+<strong>Required:</strong></p>
+<p data-line="93"><code>name=[string]</code></p>
+</li>
+<li>
+<p data-line="95"><strong>Data Params</strong></p>
+<p data-line="97">None</p>
+</li>
+<li>
+<p data-line="99"><strong>Success Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 200<br>
+<strong>Content:</strong><pre class="code cm-s-dracula CodeMirror"><span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span></span><code class="">[
+  {
+    _id:  "59fb93cef36d28650ac2ec90"
+    id: "249942"
+    name: "Hotel Stefanos"
+    stars:  3
+    price:  994.18
+    image:  "4900059_30_b.jpg"
+    amenities:[
+      "safety-box"
+      "nightclub"
+      "deep-soaking-bathtub"
+      "beach"
+      "business-center"
+    ]
+  }
+]
+</code><i><button class="clipboardButton"><svg width="13" height="13" viewBox="0 0 1792 1792"><path d="M768 1664h896v-640h-416q-40 0-68-28t-28-68v-416h-384v1152zm256-1440v-64q0-13-9.5-22.5t-22.5-9.5h-704q-13 0-22.5 9.5t-9.5 22.5v64q0 13 9.5 22.5t22.5 9.5h704q13 0 22.5-9.5t9.5-22.5zm256 672h299l-299-299v299zm512 128v672q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-160h-544q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h1088q40 0 68 28t28 68v328q21 13 36 28l408 408q28 28 48 76t20 88z"></path></svg></button></i></pre>
+</li>
+</ul>
+</li>
+<li>
+<p data-line="123"><strong>Error Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 404 NOT FOUND<br>
+<strong>Content:</strong> <code>{ error : "Hotels by :name not found" }</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 data-line="129" id="Obtener-hoteles-por-estrellas"><strong>Obtener hoteles por estrellas</strong></h2>
+<p data-line="131">Devuelve un array de datos json</p>
+<ul>
+<li>
+<p data-line="133"><strong>URL</strong></p>
+<p data-line="135">/hotels/stars/:stars</p>
+</li>
+<li>
+<p data-line="137"><strong>Method:</strong></p>
+<p data-line="139"><code>GET</code></p>
+</li>
+<li>
+<p data-line="141"><strong>URL Params</strong><br>
+<strong>Required:</strong></p>
+<p data-line="144"><code>stars=[integer]</code></p>
+</li>
+<li>
+<p data-line="146"><strong>Data Params</strong></p>
+<p data-line="148">None</p>
+</li>
+<li>
+<p data-line="150"><strong>Success Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 200<br>
+<strong>Content:</strong><pre class="code cm-s-dracula CodeMirror"><span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span></span><code class="">[
+  {
+    _id:  "59fb93cef36d28650ac2ec90"
+    id: "249942"
+    name: "Hotel Stefanos"
+    stars:  3
+    price:  994.18
+    image:  "4900059_30_b.jpg"
+    amenities:[
+      "safety-box"
+      "nightclub"
+      "deep-soaking-bathtub"
+      "beach"
+      "business-center"
+    ]
+  }
+]
+</code><i><button class="clipboardButton"><svg width="13" height="13" viewBox="0 0 1792 1792"><path d="M768 1664h896v-640h-416q-40 0-68-28t-28-68v-416h-384v1152zm256-1440v-64q0-13-9.5-22.5t-22.5-9.5h-704q-13 0-22.5 9.5t-9.5 22.5v64q0 13 9.5 22.5t22.5 9.5h704q13 0 22.5-9.5t9.5-22.5zm256 672h299l-299-299v299zm512 128v672q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-160h-544q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h1088q40 0 68 28t28 68v328q21 13 36 28l408 408q28 28 48 76t20 88z"></path></svg></button></i></pre>
+</li>
+</ul>
+</li>
+<li>
+<p data-line="174"><strong>Error Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 404 NOT FOUND<br>
+<strong>Content:</strong> <code>{ error : "Hotels by :stars not found" }</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 data-line="181" id="Obtener-un-hotel"><strong>Obtener un hotel</strong></h2>
+<p data-line="183">Devuelve un array de datos json</p>
+<ul>
+<li>
+<p data-line="185"><strong>URL</strong></p>
+<p data-line="187">/hotel/:id</p>
+</li>
+<li>
+<p data-line="189"><strong>Method:</strong></p>
+<p data-line="191"><code>GET</code></p>
+</li>
+<li>
+<p data-line="193"><strong>URL Params</strong><br>
+<strong>Required:</strong></p>
+<p data-line="196"><code>id=[string]</code> _id del hotel</p>
+</li>
+<li>
+<p data-line="198"><strong>Data Params</strong></p>
+<p data-line="200">None</p>
+</li>
+<li>
+<p data-line="202"><strong>Success Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 200<br>
+<strong>Content:</strong><pre class="code cm-s-dracula CodeMirror"><span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span></span><code class="">[
+  {
+    _id:  "59fb93cef36d28650ac2ec90"
+    id: "249942"
+    name: "Hotel Stefanos"
+    stars:  3
+    price:  994.18
+    image:  "4900059_30_b.jpg"
+    amenities:[
+      "safety-box"
+      "nightclub"
+      "deep-soaking-bathtub"
+      "beach"
+      "business-center"
+    ]
+  }
+]
+</code><i><button class="clipboardButton"><svg width="13" height="13" viewBox="0 0 1792 1792"><path d="M768 1664h896v-640h-416q-40 0-68-28t-28-68v-416h-384v1152zm256-1440v-64q0-13-9.5-22.5t-22.5-9.5h-704q-13 0-22.5 9.5t-9.5 22.5v64q0 13 9.5 22.5t22.5 9.5h704q13 0 22.5-9.5t9.5-22.5zm256 672h299l-299-299v299zm512 128v672q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-160h-544q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h1088q40 0 68 28t28 68v328q21 13 36 28l408 408q28 28 48 76t20 88z"></path></svg></button></i></pre>
+</li>
+</ul>
+</li>
+<li>
+<p data-line="226"><strong>Error Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 404 NOT FOUND<br>
+<strong>Content:</strong> <code>{ error : "Hotel by :id not found" }</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 data-line="233" id="Crear-un-hotel"><strong>Crear un hotel</strong></h2>
+<p data-line="235">Devuelve un objeto json con los datos del hotel creado</p>
+<ul>
+<li>
+<p data-line="237"><strong>URL</strong></p>
+<p data-line="239">/hotel</p>
+</li>
+<li>
+<p data-line="241"><strong>Method:</strong></p>
+<p data-line="243"><code>POST</code></p>
+</li>
+<li>
+<p data-line="245"><strong>URL Params</strong><br>
+None</p>
+</li>
+<li>
+<p data-line="248"><strong>Data Params</strong></p>
+<p data-line="250"><code>hotel</code>: objeto json con los datos del hotel</p>
+</li>
+<li>
+<p data-line="252"><strong>Success Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 200<br>
+<strong>Content:</strong><pre class="code cm-s-dracula CodeMirror"><span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span></span><code class="">  {
+    _id:  "59fb93cef36d28650ac2ec90"
+    id: "249942"
+    name: "Hotel Stefanos"
+    stars:  3
+    price:  994.18
+    image:  "4900059_30_b.jpg"
+    amenities:[
+      "safety-box"
+      "nightclub"
+      "deep-soaking-bathtub"
+      "beach"
+      "business-center"
+    ]
+  }
+</code><i><button class="clipboardButton"><svg width="13" height="13" viewBox="0 0 1792 1792"><path d="M768 1664h896v-640h-416q-40 0-68-28t-28-68v-416h-384v1152zm256-1440v-64q0-13-9.5-22.5t-22.5-9.5h-704q-13 0-22.5 9.5t-9.5 22.5v64q0 13 9.5 22.5t22.5 9.5h704q13 0 22.5-9.5t9.5-22.5zm256 672h299l-299-299v299zm512 128v672q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-160h-544q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h1088q40 0 68 28t28 68v328q21 13 36 28l408 408q28 28 48 76t20 88z"></path></svg></button></i></pre>
+</li>
+</ul>
+</li>
+<li>
+<p data-line="274"><strong>Error Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 404 NOT FOUND<br>
+<strong>Content:</strong> <code>{ error : "Error creating hotel" }</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 data-line="281" id="Actualizar-un-hotel"><strong>Actualizar un hotel</strong></h2>
+<p data-line="283">Devuelve un objeto json con los datos del hotel actualizado</p>
+<ul>
+<li>
+<p data-line="285"><strong>URL</strong></p>
+<p data-line="287">/hotel/:id</p>
+</li>
+<li>
+<p data-line="289"><strong>Method:</strong></p>
+<p data-line="291"><code>PUT</code></p>
+</li>
+<li>
+<p data-line="293"><strong>URL Params</strong><br>
+<strong>Required:</strong></p>
+<p data-line="296"><code>id=[string]</code> _id del hotel</p>
+</li>
+<li>
+<p data-line="298"><strong>Data Params</strong></p>
+<p data-line="300"><code>hotel</code>: objeto json con los datos a modificar del hotel</p>
+</li>
+<li>
+<p data-line="302"><strong>Success Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 201<br>
+<strong>Content:</strong><pre class="code cm-s-dracula CodeMirror"><span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span></span><code class="">  {
+    _id:  "59fb93cef36d28650ac2ec90"
+    id: "249942"
+    name: "Hotel Stefanos"
+    stars:  3
+    price:  994.18
+    image:  "4900059_30_b.jpg"
+    amenities:[
+      "safety-box"
+      "nightclub"
+      "deep-soaking-bathtub"
+      "beach"
+      "business-center"
+    ]
+  }
+</code><i><button class="clipboardButton"><svg width="13" height="13" viewBox="0 0 1792 1792"><path d="M768 1664h896v-640h-416q-40 0-68-28t-28-68v-416h-384v1152zm256-1440v-64q0-13-9.5-22.5t-22.5-9.5h-704q-13 0-22.5 9.5t-9.5 22.5v64q0 13 9.5 22.5t22.5 9.5h704q13 0 22.5-9.5t9.5-22.5zm256 672h299l-299-299v299zm512 128v672q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-160h-544q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h1088q40 0 68 28t28 68v328q21 13 36 28l408 408q28 28 48 76t20 88z"></path></svg></button></i></pre>
+</li>
+</ul>
+</li>
+<li>
+<p data-line="324"><strong>Error Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 404 NOT FOUND<br>
+<strong>Content:</strong> <code>{ error : "Error updating hotel" }</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 data-line="331" id="Eliminar-un-hotel"><strong>Eliminar un hotel</strong></h2>
+<p data-line="333">Devuelve un mensaje si la eliminación fue exitosa</p>
+<ul>
+<li>
+<p data-line="335"><strong>URL</strong></p>
+<p data-line="337">/hotel/:id</p>
+</li>
+<li>
+<p data-line="339"><strong>Method:</strong></p>
+<p data-line="341"><code>DELETE</code></p>
+</li>
+<li>
+<p data-line="343"><strong>URL Params</strong><br>
+<strong>Required:</strong></p>
+<p data-line="346"><code>id=[string]</code> _id del hotel</p>
+</li>
+<li>
+<p data-line="348"><strong>Data Params</strong><br>
+None</p>
+</li>
+<li>
+<p data-line="351"><strong>Success Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 201<br>
+<strong>Content:</strong> <code>{ message: 'valid deleting' }</code></li>
+</ul>
+</li>
+<li>
+<p data-line="356"><strong>Error Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 404 NOT FOUND<br>
+<strong>Content:</strong> <code>{ error : "Error deleting hotel" }</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 data-line="362" id="Deployment">Deployment</h2>
+<p data-line="364">Una vez se instalen las dependencias automáticamente se ejecutará el script <code>build</code>, y luego para iniciar la API en producción se ejecuta <code>npm start</code></p>
+<hr>
+<h2 data-line="368" id="Built-With">Built With</h2>
+<ul>
+<li><a href="https://expressjs.com/">Express</a> - The web framework used</li>
+</ul>
+<hr>
+<h2 data-line="376" id="Versioning">Versioning</h2>
+<p data-line="378">1.0.0</p>
+<hr>
+<h2 data-line="382" id="Authors">Authors</h2>
+<ul>
+<li><strong>Julián Sotelo</strong> - <em>Initial work</em> - <a href="https://github.com/juansoos">juansoos</a></li>
+</ul>
+<hr>
+<h2 data-line="388" id="License">License</h2>
+<p data-line="389">The JavaScript Templates script is released under the <a href="https://opensource.org/licenses/MIT">MIT license</a>.</p>
+</body></html>

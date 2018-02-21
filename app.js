@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import path from 'path';
 import { hotel } from './routes';
 
 const app = express();
@@ -19,5 +20,9 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use('/api/v1', hotel);
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(`${__dirname}/index.html`));
+});
 
 export default app;
