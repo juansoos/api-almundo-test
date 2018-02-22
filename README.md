@@ -8,9 +8,9 @@ Estas instrucciones le ayudarán a obtener una copia del proyecto en funcionamie
 ### **Installing**
 Primero se require clonar el repositorio
 
-* **SSH** `git clone git@bitbucket.org:las3jotas/database.git`
+* **SSH** `git clone git@github.com:juansoos/api-almundo-test.git`
 
-* **HTTPS** `git clone https://juansoos@bitbucket.org/las3jotas/database.git`
+* **HTTPS** `git clone https://github.com/juansoos/api-almundo-test.git`
 
 Luego de ello ejecutar `npm install` dentro de la carpeta del proyecto.
 
@@ -22,7 +22,7 @@ Para correr la API en desarrollo se ejecuta `npm run start:dev`
 
 ## EndPoints
 
-La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https://api-rest-almundo.now.sh/api/v1
+La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https://api-rest-almundo.now.sh/
 
 
 **Obtener hoteles**
