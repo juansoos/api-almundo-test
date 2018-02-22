@@ -1,6 +1,6 @@
 # API REST Almundo test
 
-Documentación de la API REST utilizada en la prueba para el semillero de Almundo. Dicha API se ha desarrollado utilizando express como framework web y MongoDB como gestor de base de datos.
+Documentación de la API REST utilizada en la prueba para el semillero de Almundo. Dicha API se ha desarrollado utilizando express como framework web y MongoDB como gestor de base de datos. La documentación que a continuación se muestra, también se encuentra disponible en https://api-rest-almundo.now.sh
 
 ## **Getting Started**
 Estas instrucciones le ayudarán a obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y pruebas.
@@ -22,7 +22,7 @@ Para correr la API en desarrollo se ejecuta `npm run start:dev`
 
 ## EndPoints
 
-La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https://api-rest-almundo.now.sh/
+La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https://api-rest-almundo.now.sh/api/v1
 
 
 **Obtener hoteles**
