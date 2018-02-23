@@ -58,12 +58,11 @@ La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https:
         stars:	3
         price:	994.18
         image:	"4900059_30_b.jpg"
-        amenities:[
-          "safety-box"
-          "nightclub"
-          "deep-soaking-bathtub"
-          "beach"
-          "business-center"
+        comments: [
+          {
+            name: "Jhon Doe",
+            content: "Un excelente hotel para las vacaciones"
+          }
         ]
       }
     ]
@@ -110,12 +109,11 @@ La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https:
         stars:	3
         price:	994.18
         image:	"4900059_30_b.jpg"
-        amenities:[
-          "safety-box"
-          "nightclub"
-          "deep-soaking-bathtub"
-          "beach"
-          "business-center"
+        comments: [
+          {
+            name: "Jhon Doe",
+            content: "Un excelente hotel para las vacaciones"
+          }
         ]
       }
     ]
@@ -161,12 +159,11 @@ La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https:
         stars:	3
         price:	994.18
         image:	"4900059_30_b.jpg"
-        amenities:[
-          "safety-box"
-          "nightclub"
-          "deep-soaking-bathtub"
-          "beach"
-          "business-center"
+        comments: [
+          {
+            name: "Jhon Doe",
+            content: "Un excelente hotel para las vacaciones"
+          }
         ]
       }
     ]
@@ -213,12 +210,11 @@ La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https:
         stars:	3
         price:	994.18
         image:	"4900059_30_b.jpg"
-        amenities:[
-          "safety-box"
-          "nightclub"
-          "deep-soaking-bathtub"
-          "beach"
-          "business-center"
+        comments: [
+          {
+            name: "Jhon Doe",
+            content: "Un excelente hotel para las vacaciones"
+          }
         ]
       }
     ]
@@ -262,12 +258,11 @@ La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https:
         stars:	3
         price:	994.18
         image:	"4900059_30_b.jpg"
-        amenities:[
-          "safety-box"
-          "nightclub"
-          "deep-soaking-bathtub"
-          "beach"
-          "business-center"
+        comments: [
+          {
+            name: "Jhon Doe",
+            content: "Un excelente hotel para las vacaciones"
+          }
         ]
       }
     ```
@@ -312,12 +307,11 @@ La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https:
         stars:	3
         price:	994.18
         image:	"4900059_30_b.jpg"
-        amenities:[
-          "safety-box"
-          "nightclub"
-          "deep-soaking-bathtub"
-          "beach"
-          "business-center"
+        comments: [
+          {
+            name: "Jhon Doe",
+            content: "Un excelente hotel para las vacaciones"
+          }
         ]
       }
     ```
