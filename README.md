@@ -202,7 +202,6 @@ La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https:
   * **Code:** 200
     **Content:** 
     ```
-    [
       {
         _id:	"59fb93cef36d28650ac2ec90"
         id:	"249942"
@@ -217,7 +216,6 @@ La API REST se encuentra alojada en [now](https://zeit.co/now) con la URL https:
           }
         ]
       }
-    ]
     ```
  
 * **Error Response:**
