@@ -2,6 +2,8 @@
 
 Documentación de la API REST utilizada en la prueba para el semillero de Almundo. Dicha API se ha desarrollado utilizando express como framework web y MongoDB como gestor de base de datos. La documentación que a continuación se muestra, también se encuentra disponible en https://api-rest-almundo.now.sh
 
+**Update (25-02-18)** Se desarrolla un servidor GraphQL con las mismas funcionalidades que la API REST, para ver más https://github.com/juansoos/graphql-api-almundo-test
+
 ## **Getting Started**
 Estas instrucciones le ayudarán a obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y pruebas.
 
